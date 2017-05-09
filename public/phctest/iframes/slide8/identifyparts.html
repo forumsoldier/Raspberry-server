@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap-select test page</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="dist/js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="identify.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="alternatives col-md-5">
+            <ul>
+                <li><b>A =</b> Ikke utfør vedlikehold eller rengjøring på krana mens den er slått på eller kjører</li>
+                <li><b>B =</b> Hold drev og tannkrans smørt til enhver tid. Bruk kost og hansker. </li>
+                <li><b>C =</b> Ikke miks fett som inneholder barium med litium- eller kalsium-basert fett. Fettet kan herde eller størkne. Dersom fett typen endres, rengjør smøret overflater grundig.</li>
+                <li><b>D =</b> Ingen av alternativene</li>
+             
+                
+            </ul>
+        </div>
+        <div class="inputs col-md-5">
+            <form role="form">
+                <div class="form-group">
+                    <label for="basic" class="control-label">Velg "Advarsel (Warning)"</label>
+                    <select id="q1" class="selectpicker" multiple data-done-button="true">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        
+                    </select>
+
+                    <label for="basic" class="control-label">Velg "Forsiktig (Caution)"</label>
+                    <select id="q2" class="selectpicker" multiple data-done-button="true">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                      
+                    </select>
+
+                    <label for="basic" class="control-label">Velg "Viktig (Note)"</label>
+                    <select id="q3" class="selectpicker" multiple data-done-button="true">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                  
+                    </select>
+                    
+                   
+                </div>
+                <button type="button" class="btn btn-success" onclick="ca()">Submit</button>
+            </form>
+        </div>
+        <!--<div class="image col-md-7">
+            <img style="width:100%" src="img/image59.jpg">
+        </div>-->
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var mySelect = $('#first-disabled2');
+            $('#special').on('click', function() {
+                mySelect.find('option:selected').prop('disabled', true);
+                mySelect.selectpicker('refresh');
+            });
+            $('#special2').on('click', function() {
+                mySelect.find('option:disabled').prop('disabled', false);
+                mySelect.selectpicker('refresh');
+            });
+            $('#basic2').selectpicker({
+                liveSearch: true,
+                maxOptions: 1
+            });
+        });
+
+    </script>
+</body>
+
+</html>

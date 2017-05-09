@@ -1,0 +1,87 @@
+function onResize()
+{
+	
+//OPTION 1:
+	
+
+//Scales proportionately
+	
+
+// browser viewport size
+	
+var w = window.innerWidth;
+	
+var h = window.innerHeight;
+	
+
+// stage dimensions
+	
+
+var ow = 1920; 
+
+// your stage width
+	
+
+var oh = 1080; 
+
+// your stage height
+	
+
+// keep aspect ratio
+	
+
+var scale = Math.min(w / ow, h / oh);
+	
+var newHeight = ow * scale;
+	
+var newWidth = oh * scale;
+	
+
+//
+	
+
+stage.scaleX = scale;
+	
+stage.scaleY = scale;
+	
+
+// adjust canvas size
+	
+
+stage.canvas.width = newHeight;
+	
+stage.canvas.height = newWidth;
+	
+
+//set width and height variables again
+	
+
+//var page_canvas = document.getElementsByTagName("canvas")[0];
+	
+
+//stageWidth = page_canvas.width;
+	
+//stageHeight = page_canvas.height;
+	
+
+//
+	
+
+// update the stage
+	
+
+stage.update()
+}
+
+
+//
+window.onresize = function()
+{
+     
+
+onResize();
+}
+
+
+//call it on first run
+onResize();

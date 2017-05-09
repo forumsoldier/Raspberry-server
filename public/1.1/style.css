@@ -1,0 +1,154 @@
+#main{
+width: 90%;
+    margin: auto;
+}
+svg{
+    display: none;
+}    
+.hdiv{
+    padding: 1%;
+    display: block;
+    background-color: #dddddd;
+    width: 80%;
+    margin: auto;
+    border-bottom: 
+}  
+.sl-block-content .handbook{
+    display: none;
+}  
+section {
+    padding: 1%;
+    background-color: white;
+    display: block;
+    width: 80%;
+    min-height: 200px;
+    margin: auto;
+}
+.stack{
+    width: 80%;
+}
+.postnotes{
+    padding: 7px;
+}  
+img{
+    max-width: 200px;
+    max-height: 150px;
+    display: inline-block;
+    margin: 5px;
+}
+.sl-block-content, .sl-block{
+    display: inline-block;
+}   
+#fileDisplayArea{
+    display: none;
+}
+body{
+    background-color: #363636;
+
+}
+h2 {
+    color: crimson;
+}
+h1{
+    color: white;
+}
+p, ul {
+    display: block;
+    
+}
+.dark{
+    color: white;
+}
+.light{
+    color: black;
+}
+zlide{
+    display: block;
+    margin: 10px; 
+    font-family: sans-serif;
+    width: 90%;
+    margin-left: auto;
+    margin-bottom: 15px; 
+}
+.notesfield{
+padding: 1%;
+    display: block;
+    background-color: #c9c9c9;
+    width: 80%;
+    margin: auto;
+    
+}
+textarea{
+    width: 100%;
+    
+}
+#submitbtn{
+    background-color: #60c960;
+    color: #fff;
+    font-weight: 600;
+    font-style: normal;
+}
+#formsubmit{
+    width: 57%;
+    margin: auto;
+    color: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+    #formsubmit{
+    width: 100%;
+}
+    #main{
+    width: 100%;
+}
+    .stack{
+    width: 95%;
+}
+    section {
+    width: 100%;
+}
+    .hdiv{
+    width: 100%;
+}
+    .notesfield{
+    width: 100%;
+}
+    zlide{
+    width: 100%;
+}
+}
+@media print {
+    #formsubmit{
+        display: none;
+    }
+    body{
+    background-color: #fff;
+}
+    .notesfield{
+    width: 100%;
+}
+     .hdiv{
+    width: 100%;
+}
+    .stack{
+    width: 95%;
+}
+    #main{
+    width: 100%;
+}
+    zlide{
+        page-break-after: always;
+        width: 100%;
+    }
+    section{
+        min-height: 200px;
+        width: 100%;
+        
+    }
+    .txtarea{
+        display: none;
+    }
+    .postbutton{
+        display: none;
+    }
+}

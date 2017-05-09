@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap-select test page</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="dist/js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="identify.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="alternatives col-md-5">
+            <ul>
+                <li><b>A =</b> Hver annen måned </li>
+                <li><b>B =</b> Hvert kvartal  </li>
+                <li><b>C =</b> Hvert år</li>
+                <li><b>D =</b> Når man skifter hydraulikk olje </li>
+                <li><b>E =</b> Når man skifter girboks olje  </li>
+                <li><b>F =</b> Ved 1000 driftstimer   </li>
+                <li><b>G =</b> Etter de første 50 timer i operasjon etter igangkjøring   </li>
+             
+                
+            </ul>
+        </div>
+        <div class="inputs col-md-5">
+            <form role="form">
+                <div class="form-group">
+                    <label for="basic" class="control-label">Når skal filter byttes?</label>
+                    <select id="q1" class="selectpicker" multiple data-done-button="true">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                        <option>G</option>
+                        
+                    </select>
+
+                   
+                    
+                   
+                </div>
+                <button type="button" class="btn btn-success" onclick="ca()">Submit</button>
+            </form>
+        </div>
+        <!--<div class="image col-md-7">
+            <img style="width:100%" src="img/image59.jpg">
+        </div>-->
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var mySelect = $('#first-disabled2');
+            $('#special').on('click', function() {
+                mySelect.find('option:selected').prop('disabled', true);
+                mySelect.selectpicker('refresh');
+            });
+            $('#special2').on('click', function() {
+                mySelect.find('option:disabled').prop('disabled', false);
+                mySelect.selectpicker('refresh');
+            });
+            $('#basic2').selectpicker({
+                liveSearch: true,
+                maxOptions: 1
+            });
+        });
+
+    </script>
+</body>
+
+</html>
